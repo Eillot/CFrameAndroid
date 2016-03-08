@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CFrameAndroid.iml" filepath="$PROJECT_DIR$/CFrameAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cframelibrary/cframelibrary.iml" filepath="$PROJECT_DIR$/cframelibrary/cframelibrary.iml" />
+    </modules>
+  </component>
+</project>
