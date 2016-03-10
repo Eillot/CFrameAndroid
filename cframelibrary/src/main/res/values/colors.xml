@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gray">#7d7d7d</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="base_dialog_bg">#ab000000</color>
+
+    <!-- from zxing-colors.xml begin -->
+    <color name="viewfinder_mask">#70000000</color>
+    <!-- from zxing-colors.xml end -->
+
+	<color name="integral_feedback_bg">#DA5A4D</color>
+    <color name="activity_main_home_titlebar_bg">#DB5B4E</color>
+</resources>

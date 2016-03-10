@@ -1,3 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CFrameLibrary</string>
+
+    <string name="loading">系统初始化中</string>
+    <string name="app_name">复观核心包</string>
+    <string name="base_progress_dialog_ok">确定</string>
+    <string name="base_progress_dialog_loading">正在加载…</string>
+    <string name="base_progress_dialog_cancel">取消</string>
+    <string name="base_progress_dialog_title">提示</string>
+    <string name="base_exit_app">确认退出应用吗？</string>
+    <string name="base_net_error">网络异常,请检查网络连接!</string>
+    <string name="press_capture_text">将二维码图案放进取景框内 \n 即可自动扫描</string>
+
 </resources>
