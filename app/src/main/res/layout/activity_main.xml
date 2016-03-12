@@ -1,16 +1,166 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="cyl.cframe.android.MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/home_bottom_lauout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentBottom="true"
+        android:background="@color/home_bottom_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_main_layout"
+            style="@style/home_bottom_layout_item"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/home_main_hot_iv"
+                android:layout_width="@dimen/red_hot_iv_hight"
+                android:layout_height="@dimen/red_hot_iv_hight"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/red_hot_shape_bg"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/home_main_iv"
+                android:layout_width="@dimen/taskbar_icon_hight"
+                android:layout_height="@dimen/taskbar_icon_hight"
+                android:focusableInTouchMode="false"
+                android:src="@mipmap/icon_home" />
+
+            <TextView
+                android:id="@+id/home_main_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/taskbar_tv_margin_top"
+                android:focusableInTouchMode="false"
+                android:text="@string/home_bottom_main_label"
+                android:textColor="@color/home_tab_text_color"
+                android:textSize="@dimen/taskbar_tv_size" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/home_want_layout"
+            style="@style/home_bottom_layout_item"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/home_want_hot_iv"
+                android:layout_width="@dimen/red_hot_iv_hight"
+                android:layout_height="@dimen/red_hot_iv_hight"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/red_hot_shape_bg"
+                android:textSize="@dimen/taskbar_tv_size"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/home_want_iv"
+                android:layout_width="@dimen/taskbar_icon_hight"
+                android:layout_height="@dimen/taskbar_icon_hight"
+                android:focusableInTouchMode="false"
+                android:src="@mipmap/icon_purchase" />
+
+            <TextView
+                android:id="@+id/home_want_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/taskbar_tv_margin_top"
+                android:focusableInTouchMode="false"
+                android:text="@string/home_bottom_categories"
+                android:textColor="@color/home_tab_text_color"
+                android:textSize="@dimen/taskbar_tv_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_find_layout"
+            style="@style/home_bottom_layout_item"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/home_find_hot_iv"
+                android:layout_width="@dimen/red_hot_iv_hight"
+                android:layout_height="@dimen/red_hot_iv_hight"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/red_hot_shape_bg"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/home_find_iv"
+                android:layout_width="@dimen/taskbar_icon_hight"
+                android:layout_height="@dimen/taskbar_icon_hight"
+                android:focusableInTouchMode="false"
+                android:src="@mipmap/icon_find" />
+
+            <TextView
+                android:id="@+id/home_find_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/taskbar_tv_margin_top"
+                android:focusableInTouchMode="false"
+                android:text="@string/home_bottom_find_label"
+                android:textColor="@color/home_tab_text_color"
+                android:textSize="@dimen/taskbar_tv_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_mine_layout"
+            style="@style/home_bottom_layout_item"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/home_mine_hot_iv"
+                android:layout_width="@dimen/red_hot_iv_hight"
+                android:layout_height="@dimen/red_hot_iv_hight"
+                android:layout_gravity="right"
+                android:layout_marginRight="25dp"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/red_hot_shape_bg"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/home_mine_iv"
+                android:layout_width="@dimen/taskbar_icon_hight"
+                android:layout_height="@dimen/taskbar_icon_hight"
+                android:layout_marginTop="@dimen/margin_5"
+                android:focusableInTouchMode="false"
+                android:src="@mipmap/icon_me" />
+
+            <TextView
+                android:id="@+id/home_mine_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/taskbar_tv_margin_top"
+                android:focusableInTouchMode="false"
+                android:text="@string/home_bottom_mine_label"
+                android:textColor="@color/home_tab_text_color"
+                android:textSize="@dimen/taskbar_tv_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/home_bottom_lauout"></FrameLayout>
+
 </RelativeLayout>
