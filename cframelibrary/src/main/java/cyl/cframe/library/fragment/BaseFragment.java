@@ -37,7 +37,6 @@ public abstract class BaseFragment extends Fragment {private View mProgressConta
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        init();
         return inflater.inflate(R.layout.base_fragment, container, false);
 
     }
@@ -58,7 +57,7 @@ public abstract class BaseFragment extends Fragment {private View mProgressConta
         setInternalContentView(mContentView);
         fillView();
         setListener();
-        loadData();
+        initData();
     }
 
     /**
@@ -72,16 +71,13 @@ public abstract class BaseFragment extends Fragment {private View mProgressConta
         super.onDestroyView();
     }
 
-    public abstract void init();
 
-    protected void fillView() {
-    }
 
-    protected void setListener() {
-    }
+    protected abstract void fillView();
 
-    protected void loadData() {
-    }
+    protected abstract void setListener();
+
+    protected abstract void initData();
 
     /**
      * Return content view or null if the content view has not been initialized.
