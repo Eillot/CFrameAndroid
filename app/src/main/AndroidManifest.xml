@@ -43,6 +43,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.toolbar.ToolBarActivity" />
+        <activity android:name=".ui.find.CircleImageViewActivity" />
     </application>
 
 </manifest>

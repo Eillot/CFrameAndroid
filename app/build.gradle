@@ -31,4 +31,5 @@ dependencies {
     compile project(':cframelibrary')
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile files('libs/umeng-analytics-v5.6.4.jar')
+    compile 'de.hdodenhof:circleimageview:2.0.0'
 }

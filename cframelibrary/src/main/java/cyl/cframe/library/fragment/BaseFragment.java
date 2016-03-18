@@ -14,7 +14,8 @@ import cyl.cframe.library.R;
 /**
  * Created by jerry on 2016/3/9.
  */
-public abstract class BaseFragment extends Fragment {private View mProgressContainer;
+public abstract class BaseFragment extends Fragment {
+    private View mProgressContainer;
     private View mContentContainer;
     private View mContentView;
     private View mInternalContentView;
@@ -70,7 +71,6 @@ public abstract class BaseFragment extends Fragment {private View mProgressConta
         mProgressContainer = mContentContainer = mContentView = mInternalContentView = mEmptyView = null;
         super.onDestroyView();
     }
-
 
 
     protected abstract void fillView();

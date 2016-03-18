@@ -8,4 +8,5 @@
     <dimen name="taskbar_tv_margin_top">3dp</dimen>
     <dimen name="taskbar_icon_hight">22dp</dimen>
     <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
 </resources>
