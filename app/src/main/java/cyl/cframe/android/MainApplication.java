@@ -10,6 +10,9 @@ import com.android.volley.toolbox.HttpClientStack;
 import com.android.volley.toolbox.HttpStack;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.facebook.cache.disk.DiskCacheConfig;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
 
 import org.apache.http.client.CookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -42,6 +45,8 @@ public class MainApplication extends Application {
         super.onCreate();
         mInstance = this;
         LogUtil.isDebug = BuildConfig.DEBUG;
+
+        Fresco.initialize(this, createFrescoConfig());
         //HttpUtils.getInstance(this).setDebug(true);
 
 //        DBConfig dbConfig = new DBConfig.Builder(this)
@@ -95,6 +100,31 @@ public class MainApplication extends Application {
         if (mRequestQueue != null) {
             mRequestQueue.cancelAll(tag);
         }
+    }
+
+    private ImagePipelineConfig createFrescoConfig() {
+        DiskCacheConfig mainDiskCacheConfig = DiskCacheConfig.newBuilder(this)
+                .setBaseDirectoryPath(getExternalCacheDir())
+                .setBaseDirectoryName("fresco cache")
+                .setMaxCacheSize(100 * 1024 * 1024)
+                .setMaxCacheSizeOnLowDiskSpace(10 * 1024 * 1024)
+                .setMaxCacheSizeOnVeryLowDiskSpace(5 * 1024 * 1024)
+                .setVersion(1)
+                .build();
+        return ImagePipelineConfig.newBuilder(this)
+//                .setBitmapMemoryCacheParamsSupplier(bitmapCacheParamsSupplier)
+//                .setCacheKeyFactory(cacheKeyFactory)
+//                .setEncodedMemoryCacheParamsSupplier(encodedCacheParamsSupplier)
+//                .setExecutorSupplier(executorSupplier)
+//                .setImageCacheStatsTracker(imageCacheStatsTracker)
+                .setMainDiskCacheConfig(mainDiskCacheConfig)
+//                .setMemoryTrimmableRegistry(memoryTrimmableRegistry)
+//                .setNetworkFetchProducer(networkFetchProducer)
+//                .setPoolFactory(poolFactory)
+//                .setProgressiveJpegConfig(progressiveJpegConfig)
+//                .setRequestListeners(requestListeners)
+//                .setSmallImageDiskCacheConfig(smallImageDiskCacheConfig)
+                .build();
     }
 
 }

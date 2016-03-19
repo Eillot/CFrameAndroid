@@ -44,6 +44,7 @@
         </activity>
         <activity android:name=".ui.toolbar.ToolBarActivity" />
         <activity android:name=".ui.find.CircleImageViewActivity" />
+        <activity android:name=".ui.find.CardViewActivity"/>
     </application>
 
 </manifest>

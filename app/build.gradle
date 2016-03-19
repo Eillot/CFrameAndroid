@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "cyl.cframe.android"
-        minSdkVersion 11
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -32,4 +32,10 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile files('libs/umeng-analytics-v5.6.4.jar')
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.facebook.fresco:stetho:0.9.0'
+    compile 'com.facebook.fresco:fresco:0.9.0'
+    compile 'com.facebook.fresco:imagepipeline:0.9.0'
+    compile 'com.facebook.fresco:fbcore:0.9.0'
+    compile 'com.facebook.fresco:drawee:0.9.0'
+    compile 'com.facebook.fresco:imagepipeline-base:0.9.0'
 }
