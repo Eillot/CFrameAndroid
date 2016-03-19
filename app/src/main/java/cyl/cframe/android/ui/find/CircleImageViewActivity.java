@@ -28,6 +28,7 @@ public class CircleImageViewActivity extends BaseActivity {
     protected void initData() {
         toolbar.setTitle("Cilcle ImageVIew");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -41,6 +42,9 @@ public class CircleImageViewActivity extends BaseActivity {
                     case R.id.action_msg:
                         android.widget.Toast.makeText(CircleImageViewActivity.this, "消息", android.widget.Toast.LENGTH_SHORT).show();
 
+                        break;
+                    case android.R.id.home:
+                        finish();
                         break;
 
                 }
