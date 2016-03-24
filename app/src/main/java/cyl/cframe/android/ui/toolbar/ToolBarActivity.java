@@ -1,11 +1,10 @@
 package cyl.cframe.android.ui.toolbar;
 
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import cyl.cframe.android.R;
-import cyl.cframe.android.ui.BaseActivity;
+import cyl.cframe.android.base.activity.BaseActivity;
 
 /**
  * Created by jerry on 2016/3/12.
@@ -37,7 +36,7 @@ public class ToolBarActivity extends BaseActivity {
             public boolean onMenuItemClick(MenuItem item) {
 
                 switch (item.getItemId()) {
-                    case R.id.action_settings:
+                    case R.id.action_offline:
                         break;
                 }
                 return false;

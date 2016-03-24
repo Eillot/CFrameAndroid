@@ -43,8 +43,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.toolbar.ToolBarActivity" />
-        <activity android:name=".ui.find.CircleImageViewActivity" />
-        <activity android:name=".ui.find.CardViewActivity"/>
+        <activity android:name=".ui.find.CircleImageViewActivity">
+            <meta-data
+                android:name="android.support.v4.app.Fragment"
+                android:value="cyl.cframe.android.ui.FindFragment" />
+        </activity>
+        <activity android:name=".ui.find.CardViewActivity" />
     </application>
 
 </manifest>

@@ -3,33 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <item
-        android:id="@+id/action_edit"
-        android:icon="@drawable/ab_edit"
-        android:orderInCategory="80"
-        android:title="@string/action_edit"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_share"
-        android:icon="@drawable/ab_share"
+    <item android:id="@+id/action_zone"
+        android:title="@string/zone"
         android:orderInCategory="90"
-        android:title="@string/action_edit"
+        android:icon="@mipmap/biz_forum_author_icon"
         app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/action_settings"
+
+    <item android:id="@+id/action_weather"
+        android:title="@string/weather"
         android:orderInCategory="100"
-        android:title="设置"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_msg"
+        android:icon="@mipmap/biz_main_menu_weather"
+        app:showAsAction="never"/>
+    <item android:id="@+id/action_offline"
+        android:title="@string/offline"
         android:orderInCategory="100"
-        android:title="信息"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_back_home"
+        android:icon="@mipmap/biz_main_menu_offline"
+        app:showAsAction="never"/>
+    <item android:id="@+id/action_theme"
+        android:title="@string/theme"
         android:orderInCategory="100"
-        android:title="回首页"
-        app:showAsAction="never" />
+        android:icon="@mipmap/biz_main_menu_theme"
+        app:showAsAction="never"/>
+    <item android:id="@+id/action_search"
+        android:title="@string/search"
+        android:orderInCategory="100"
+        android:icon="@mipmap/biz_main_menu_search"
+        app:showAsAction="never"/>
+    <item android:id="@+id/action_scan"
+        android:title="@string/scan"
+        android:orderInCategory="100"
+        android:icon="@mipmap/biz_main_menu_scan"
+        app:showAsAction="never"/>
+    <item android:id="@+id/action_setting"
+        android:title="@string/setting"
+        android:orderInCategory="100"
+        android:icon="@mipmap/biz_main_menu_setting"
+        app:showAsAction="never"/>
 </menu>
