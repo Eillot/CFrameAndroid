@@ -72,7 +72,6 @@ public abstract class BaseFragment extends Fragment {
         super.onDestroyView();
     }
 
-
     protected abstract void fillView();
 
     protected abstract void setListener();

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_right_16"
+        android:background="@color/coral"
+        android:text="ListView" />
+
+    <Button
+        android:id="@+id/bt_gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:background="@color/coral"
+        android:text="GridView" />
+
+    <Button
+        android:id="@+id/bt_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:background="@color/coral"
+        android:text="网络请求" />
+
+    <Button
+        android:id="@+id/bt_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_right_16"
+        android:layout_marginTop="60dp"
+        android:background="@color/coral"
+        android:text="动画" />
+
+    <Button
+        android:id="@+id/bt_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/coral"
+        android:text="音频" />
+
+    <Button
+        android:id="@+id/bt_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/coral"
+        android:text="提示框" />
+
+</merge>

@@ -1,9 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!-- home title -->
 
+    <RelativeLayout
+        android:id="@+id/home_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_home_nav_color"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/home_title_logo_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_right_16"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher" />
+
+        <EditText
+            android:id="@+id/home_search_et"
+            android:layout_width="210dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/home_title_logo_img"
+            android:background="@drawable/home_search_edit_shape_bg"
+            android:drawableLeft="@mipmap/icon_search"
+            android:drawablePadding="6dp"
+            android:focusable="false"
+            android:hint="请输入搜索名称、关键字"
+            android:paddingLeft="8dp"
+            android:textColorHint="#CFD3D6"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/home_title_message_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_left_right_16"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_title_message_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_mine_messages" />
+
+            <TextView
+                android:id="@+id/home_title_message_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="消息"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/home_title_message_num_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/red_hot_shape_bg"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <!-- home content -->
+
+    <cyl.cframe.library.widgets.pulltorefresh.PullToRefreshNewScrollView
+        android:id="@+id/home_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F5F4F9"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="rotate">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical">
+            <!-- 广告轮播 -->
+            <RelativeLayout
+                android:id="@+id/home_advs_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="180dp">
+
+                <cyl.cframe.library.widgets.viewpager.ViewPagerEx
+                    android:id="@+id/home_advs_viewpager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/home_adv"
+                    android:focusable="true" />
+
+                <cyl.cframe.library.widgets.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/home_adv_viewpager_indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    ptr:fillColor="#FF6600"
+                    ptr:pageColor="@color/white"
+                    ptr:radius="4dp"
+                    ptr:strokeWidth="0dp" />
+            </RelativeLayout>
+
+            <!--模块功能 入口-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center|top"
+                android:paddingTop="10dp">
+                <include layout="@layout/include_home_func_module_item"></include>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </cyl.cframe.library.widgets.pulltorefresh.PullToRefreshNewScrollView>
 
 </LinearLayout>

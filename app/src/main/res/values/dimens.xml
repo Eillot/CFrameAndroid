@@ -9,4 +9,10 @@
     <dimen name="taskbar_icon_hight">22dp</dimen>
     <dimen name="margin_5">5dp</dimen>
     <dimen name="margin_10">10dp</dimen>
+
+    <!--common dimen-->
+    <dimen name="nav_bar_height">56dp</dimen>
+    <!--common margin-->
+    <dimen name="margin_left_right_16">16dp</dimen>
+
 </resources>
