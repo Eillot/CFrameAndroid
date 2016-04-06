@@ -26,7 +26,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"></uses-permission>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
 
     <application
         android:name=".MainApplication"
@@ -49,6 +49,13 @@
                 android:value="cyl.cframe.android.ui.FindFragment" />
         </activity>
         <activity android:name=".ui.find.CardViewActivity" />
+        <activity android:name=".ui.home.AlertActivity" />
+        <activity android:name=".ui.home.AnimationActivity" />
+        <activity android:name=".ui.home.AudioActivity" />
+        <activity android:name=".ui.home.GridViewActivity" />
+        <activity android:name=".ui.home.ListViewActivity" />
+        <activity android:name=".ui.home.NetworkActivity" />
+        <activity android:name=".ui.home.gridview.WaterfallsFlowActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_bar_height"
+    android:background="@color/ivory">
+
+    <ImageView
+        android:id="@+id/navigation_bar_back_iv"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_left_right_16"
+        android:gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_arrow_back"/>
+
+    <TextView
+        android:id="@+id/navigation_bar_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/text_color1"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/navigation_bar_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/navigation_bar_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#D9D9D9" />
+
+</RelativeLayout>

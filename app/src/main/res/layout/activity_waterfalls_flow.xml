@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cyl.cframe.android.ui.home.gridview.WaterfallsFlowActivity">
+
+    <include
+        android:id="@+id/nav_top"
+        layout="@layout/app_navigation_bar"></include>
+
+    <com.etsy.android.grid.StaggeredGridView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/staggered_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_top"
+        app:column_count="2"
+        app:item_margin="8dp">
+
+    </com.etsy.android.grid.StaggeredGridView>
+
+
+</RelativeLayout>

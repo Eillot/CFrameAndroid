@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_navigation_bar"></include>
+
+    <RelativeLayout
+        android:id="@+id/down_refresh_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_48"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_left_right_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="下拉刷新"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left_right_16"
+            android:src="@drawable/icon_next_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/up_refresh_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_48"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_left_right_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="上拉刷新"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left_right_16"
+            android:src="@drawable/icon_next_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/up_down_refresh_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_48"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_left_right_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="上下拉刷新"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left_right_16"
+            android:src="@drawable/icon_next_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/staggered_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_48"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_left_right_16"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="瀑布流排列"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left_right_16"
+            android:src="@drawable/icon_next_right" />
+    </RelativeLayout>
+</LinearLayout>

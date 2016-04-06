@@ -15,4 +15,9 @@
     <!--common margin-->
     <dimen name="margin_left_right_16">16dp</dimen>
 
+    <!--共用布局宽度-->
+    <dimen name="layout_width_300">300dp</dimen>
+    <!--共用布局高度-->
+    <dimen name="layout_height_48">48dp</dimen>
+
 </resources>

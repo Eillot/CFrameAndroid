@@ -1,5 +1,6 @@
 package cyl.cframe.android.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,12 @@ import cyl.cframe.android.R;
 import cyl.cframe.android.data.TestSimpleData;
 import cyl.cframe.android.data.table.AdvertisementInfo;
 import cyl.cframe.android.ui.adapter.AdvsPagerAdapter;
+import cyl.cframe.android.ui.home.AlertActivity;
+import cyl.cframe.android.ui.home.AnimationActivity;
+import cyl.cframe.android.ui.home.AudioActivity;
+import cyl.cframe.android.ui.home.GridViewActivity;
+import cyl.cframe.android.ui.home.ListViewActivity;
+import cyl.cframe.android.ui.home.NetworkActivity;
 import cyl.cframe.library.database.DBHelper;
 import cyl.cframe.library.fragment.BaseFragment;
 import cyl.cframe.library.widgets.pulltorefresh.PullToRefreshNewScrollView;
@@ -96,16 +103,22 @@ public class HomeFragment extends BaseFragment {
             try {
                 switch (v.getId()) {
                     case R.id.bt_alert:
+                        startActivity(new Intent().setClass(getActivity(), AlertActivity.class));
                         break;
                     case R.id.bt_animation:
+                        startActivity(new Intent().setClass(getActivity(), AnimationActivity.class));
                         break;
                     case R.id.bt_audio:
+                        startActivity(new Intent().setClass(getActivity(), AudioActivity.class));
                         break;
                     case R.id.bt_network:
+                        startActivity(new Intent().setClass(getActivity(), NetworkActivity.class));
                         break;
                     case R.id.bt_listview:
+                        startActivity(new Intent().setClass(getActivity(), ListViewActivity.class));
                         break;
                     case R.id.bt_gridview:
+                        startActivity(new Intent().setClass(getActivity(), GridViewActivity.class));
                         break;
                     default:
                         break;
