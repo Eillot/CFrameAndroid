@@ -12,6 +12,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import cyl.cframe.android.R;
@@ -23,7 +24,6 @@ import cyl.cframe.library.widgets.BaseProgressDialog;
 public abstract class BaseActivity extends AppCompatActivity {
 
     private BaseProgressDialog mProgressDialog = null;
-
     private ImageView mNavigationBarBack;
     private TextView mNavigationBarTitle;
     private Button mNavigationBarRight;
@@ -34,10 +34,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 
         setContentView();
-
-        mNavigationBarBack=(ImageView)findViewById(R.id.navigation_bar_back_iv);
-        mNavigationBarTitle=(TextView)findViewById(R.id.navigation_bar_title_tv);
-        mNavigationBarRight=(Button)findViewById(R.id.navigation_bar_right_btn);
+        mNavigationBarBack = (ImageView) findViewById(R.id.navigation_bar_back_iv);
+        mNavigationBarTitle = (TextView) findViewById(R.id.navigation_bar_title_tv);
+        mNavigationBarRight = (Button) findViewById(R.id.navigation_bar_right_btn);
 
         mNavigationBarBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,9 +95,15 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @author Jerry.Cao
      */
 
-    protected void setNavigationBarTitle(String title){
-        if (mNavigationBarTitle==null){
-            mNavigationBarTitle=(TextView)findViewById(R.id.navigation_bar_title_tv);
+
+    /**
+     * 设置导航栏标题
+     *
+     * @param title
+     */
+    protected void setNavigationBarTitle(String title) {
+        if (mNavigationBarTitle == null) {
+            mNavigationBarTitle = (TextView) findViewById(R.id.navigation_bar_title_tv);
         }
 
         mNavigationBarTitle.setText(title);

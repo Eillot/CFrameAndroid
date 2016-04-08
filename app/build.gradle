@@ -6,6 +6,7 @@ android {
 
     defaultConfig {
         applicationId "cyl.cframe.android"
+        multiDexEnabled true
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
@@ -16,6 +17,15 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug{
+
+        }
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+    dexOptions {
+        preDexLibraries = false
     }
 }
 
@@ -41,4 +51,5 @@ dependencies {
     compile 'com.github.satyan:sugar:1.5'
     compile 'com.aurelhubert:ahbottomnavigation:0.1.6'
     compile 'com.etsy.android.grid:library:1.0.5'
+    compile files('libs/android-support-v4.jar')
 }

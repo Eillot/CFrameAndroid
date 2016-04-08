@@ -10,6 +10,7 @@ import com.android.volley.toolbox.HttpClientStack;
 import com.android.volley.toolbox.HttpStack;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.baidu.mapapi.SDKInitializer;
 import com.facebook.cache.disk.DiskCacheConfig;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
@@ -45,6 +46,10 @@ public class MainApplication extends Application {
         super.onCreate();
         mInstance = this;
         LogUtil.isDebug = BuildConfig.DEBUG;
+
+        //在使用SDK各组件之前初始化context信息，传入ApplicationContext
+        //注意该方法要再setContentView方法之前实现
+        SDKInitializer.initialize(getApplicationContext());
 
         Fresco.initialize(this, createFrescoConfig());
         //HttpUtils.getInstance(this).setDebug(true);

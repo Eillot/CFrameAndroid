@@ -23,11 +23,20 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <!-- 其他权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
 
+    <!-- 百度地图 权限 和app key 开始 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGSWRITE_SETTINGS" />
+
+
+
+    <!-- 百度地图 权限 和app key 结束 -->
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -35,6 +44,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="ZXm0G0XQNKR3LMSEzj0gpWR5rnBeq4UV" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +69,10 @@
         <activity android:name=".ui.home.GridViewActivity" />
         <activity android:name=".ui.home.ListViewActivity" />
         <activity android:name=".ui.home.NetworkActivity" />
-        <activity android:name=".ui.home.gridview.WaterfallsFlowActivity"></activity>
+        <activity android:name=".ui.home.gridview.WaterfallsFlowActivity" />
+        <activity android:name=".ui.find.SusDockActivity" />
+        <activity android:name=".ui.me.CardViewActivity" />
+        <activity android:name=".ui.find.MapViewActivity"></activity>
     </application>
 
 </manifest>
